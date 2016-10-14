@@ -4,11 +4,13 @@ $(document).ready(function () {
     $(".subscribeUser").ajaxForm({
         dataType: 'json',
         success: processJSON,
-        beforeSubmit: function () {
-            $(".spinner").show();
-        }
+        beforeSubmit: showSpinner
     });
 });
+
+function showSpinner() {
+    $(".spinner").show();
+}
 
 function processJSON(data) {
     if (data.success === true) {
