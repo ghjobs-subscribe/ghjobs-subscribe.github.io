@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    $(".message").hide();
-    $(".spinner").hide();
     $(".subscribeUser").ajaxForm({
         dataType: 'json',
         success: processJSON,
