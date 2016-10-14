@@ -1,11 +1,19 @@
-$(document).ready(function () {
-    $(".subscribeUser").ajaxForm({
+function subscribeUser() {
+    var options = {
+        url: "http://138.68.52.65:8080/subscribe",
+        type: "post",
         dataType: 'json',
-        success: processJSON,
+        clearForm: true,
         beforeSubmit: showSpinner,
+        success: processJSON,
         error: showError
+    };
+
+    $('.form').submit(function(){
+        $(this).ajaxSubmit(options);
+        return false;
     });
-});
+}
 
 function showSpinner() {
     $(".spinner").show();
