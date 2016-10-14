@@ -20,9 +20,12 @@ function showError() {
 
 function processJSON(data) {
     if (data.success === true) {
-        $(".form").hide();
-    }
-    $(".spinner").hide();
-    $(".message").text(data.message);
-    $(".message").show();
+            $(".message").hide();
+            $(".form").hide();
+        }
+    setTimeout(function () {
+        $(".spinner").hide();
+        $(".message").text(data.message);
+        $(".message").show();
+    }, 1000);
 }
