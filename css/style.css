@@ -77,7 +77,7 @@ body {
     transform: scale(1); } }
 .form {
   margin-bottom: 3em; }
-  .form input {
+  .form input.email {
     border-style: solid;
     border-color: #294455;
     color: #294455;
@@ -87,17 +87,17 @@ body {
     margin: 4px 2px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s; }
-  .form input:hover {
+  .form input.email:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
-  .form input:focus::-webkit-input-placeholder {
+  .form input.email:focus::-webkit-input-placeholder {
     color: transparent; }
-  .form input:focus:-moz-placeholder {
+  .form input.email:focus:-moz-placeholder {
     color: transparent; }
-  .form input:focus::-moz-placeholder {
+  .form input.email:focus::-moz-placeholder {
     color: transparent; }
-  .form input:focus:-ms-input-placeholder {
+  .form input.email:focus:-ms-input-placeholder {
     color: transparent; }
-  .form button {
+  .form button.subscribe {
     background-color: #2a7fc3;
     border: none;
     color: #fafafa;
@@ -110,7 +110,7 @@ body {
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s; }
-  .form button:hover {
+  .form button.subscribe:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
 
 .strip a {
