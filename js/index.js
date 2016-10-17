@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var options = {
 	url: 'https://api.ghjobssubscribe.com/subscribe',
-	type: 'post',
+	type: 'POST',
         dataType: 'json',
         success: processJSON,
         error: showServerError
