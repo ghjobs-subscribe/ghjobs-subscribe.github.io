@@ -13,10 +13,6 @@ $(document).ready(function () {
     });
 });
 
-function showSpinner() {
-    $(".spinner").show();
-}
-
 function showServerError() {
     var message = "There seems to be an error with the server. Please come back later."
     $(".message").text(message);
