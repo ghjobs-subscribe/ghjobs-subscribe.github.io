@@ -3,6 +3,6 @@
 
 ### Sass ###
 .sass-cache/
-*.css.map
+/css/*.css.map
 
 .DS_STORE
