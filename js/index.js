@@ -13,13 +13,16 @@ $(document).ready(function () {
     });
 });
 
-function showServerError() {
+function showServerError(error) {
+    console.log(error);
+    $(".message").show();
     var message = "There seems to be an error with the server. Please come back later."
     $(".message").text(message);
     $(".message").show();
 }
 
 function processJSON(data) {
+    console.log(data);
     if (data.success === true) {
         $(".message").hide();
         $(".form").hide();
