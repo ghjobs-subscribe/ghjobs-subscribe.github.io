@@ -1,8 +1,9 @@
 $(document).ready(function () {
     var options = {
-	url: 'https://api.ghjobssubscribe.com/subscribe',
-	type: 'POST',
+        url: 'https://api.ghjobssubscribe.com/subscribe',
+        type: 'POST',
         dataType: 'json',
+        beforeSubmit: showSpinner,
         success: processJSON,
         error: showServerError
     };
@@ -13,20 +14,32 @@ $(document).ready(function () {
     });
 });
 
-function showServerError(error) {
-    console.log(error);
+function showSpinner() {
+    $(".spinner").show();
+}
+
+function showError() {
+    var message = "There seems to be an error with the server. Please come back later."
+    $(".message").text(message);
     $(".message").show();
+}
+
+function showServerError(error) {
+    $(".spinner").hide();
+    $(".message").hide();
     var message = "There seems to be an error with the server. Please come back later."
     $(".message").text(message);
     $(".message").show();
 }
 
 function processJSON(data) {
-    console.log(data);
     if (data.success === true) {
         $(".message").hide();
         $(".form").hide();
     }
-    $(".message").text(data.message);
-    $(".message").show();
+    setTimeout(function () {
+        $(".spinner").hide();
+        $(".message").text(data.message);
+        $(".message").show();
+    }, 1000);
 }
