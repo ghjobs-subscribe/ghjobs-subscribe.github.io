@@ -18,12 +18,6 @@ function showSpinner() {
     $(".spinner").show();
 }
 
-function showError() {
-    var message = "There seems to be an error with the server. Please come back later."
-    $(".message").text(message);
-    $(".message").show();
-}
-
 function showServerError(error) {
     $(".spinner").hide();
     $(".message").hide();
@@ -33,8 +27,8 @@ function showServerError(error) {
 }
 
 function processJSON(data) {
+    $(".message").hide();
     if (data.success === true) {
-        $(".message").hide();
         $(".form").hide();
     }
     setTimeout(function () {
