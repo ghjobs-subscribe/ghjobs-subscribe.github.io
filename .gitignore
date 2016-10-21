@@ -1,7 +1,10 @@
 
+.DS_STORE
+
 # Created by https://www.gitignore.io/api/sass
 
 ### Sass ###
+css/scss/
 .sass-cache/
 
 .DS_STORE
