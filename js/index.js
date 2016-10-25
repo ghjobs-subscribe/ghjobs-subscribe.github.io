@@ -15,19 +15,17 @@ $(document).ready(function () {
 });
 
 function showSpinner() {
+    $(".message").hide();
     $(".spinner").show();
 }
 
 function showServerError(error) {
-    $(".spinner").hide();
-    $(".message").hide();
     var message = "There seems to be an error with the server. Please come back later."
     $(".message").text(message);
     $(".message").show();
 }
 
 function processJSON(data) {
-    $(".message").hide();
     if (data.success === true) {
         $(".form").hide();
     }
