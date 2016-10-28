@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    var lasthash = window.location.hash;
-
     var options = {
         type: 'POST',
         dataType: 'json',
