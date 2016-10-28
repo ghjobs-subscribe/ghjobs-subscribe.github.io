@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    var lasthash = window.location.hash;
-    localStorage.setItem("clickedLinkID", "subscribeFormLink");
-
     var options = {
         type: 'POST',
         dataType: 'json',
@@ -23,25 +20,6 @@ $(document).ready(function () {
     $('#unsubscribeForm').submit(function () {
         $(this).ajaxSubmit(options);
         return false;
-    });
-
-    $("a.nav-link").click(function () {
-        $(".message").hide();
-        $(".active").removeClass("active");
-        $(this).addClass("active");
-        localStorage.setItem("clickedLinkID", $(this).attr("id"));
-    });
-
-    $(window).on('hashchange', function () {
-        var hash = window.location.hash;
-        console.log(lasthash, hash);
-        $('form' + lasthash).hide();
-        $('form' + hash).show();
-        lasthash = hash;
-
-        if (localStorage.getItem("clickedLinkID")) {
-            $('#' + localStorage.getItem("clickedLinkID")).addClass("active");
-        }
     });
 });
 
