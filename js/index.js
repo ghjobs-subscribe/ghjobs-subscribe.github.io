@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    var lasthash = window.location.hash;
+    localStorage.setItem("clickedLinkID", "subscribeFormLink");
+
     var options = {
         type: 'POST',
         dataType: 'json',
@@ -30,10 +33,11 @@ $(document).ready(function () {
     });
 
     $(window).on('hashchange', function () {
+        // if (lasthash == "") {
+        //     lasthash = "subscribeLink"
+        // }
         var hash = window.location.hash;
-        if (lasthash == "") {
-            lasthash = "#subscribeForm";
-        }
+        console.log(lasthash, hash);
         $('form' + lasthash).hide();
         $('form' + hash).show();
         lasthash = hash;
