@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var lasthash = window.location.hash;
+
     var options = {
         url: 'https://api.ghjobssubscribe.com/subscribe',
         type: 'POST',
@@ -7,10 +9,31 @@ $(document).ready(function () {
         success: processJSON,
         error: showServerError
     };
-    $('#subscribeUser').ajaxForm();
-    $('#subscribeUser').submit(function () {
+    $('#subscribeForm').ajaxForm();
+    $('#subscribeForm').submit(function () {
         $(this).ajaxSubmit(options);
         return false;
+    });
+
+    $("a.nav-link").click(function () {
+        $(".active").removeClass("active");
+        $(this).addClass("active");
+        localStorage.setItem("clickedLinkID", $(this).attr("id"));
+    });
+
+    $(window).on('hashchange', function () {
+        var hash = window.location.hash;
+        if (lasthash == "") {
+            lasthash = "#subscribeForm";
+        }
+        // console.log(lasthash, hash);
+        $('form' + lasthash).hide();
+        $('form' + hash).show();
+        lasthash = hash;
+
+        if (localStorage.getItem("clickedLinkID")) {
+            $('#' + localStorage.getItem("clickedLinkID")).addClass("active");
+        }
     });
 });
 
