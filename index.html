@@ -35,15 +35,15 @@
 		</div>
 		<div class="form">
 			<div class="message" hidden></div>
-			<form id="subscribeForm">
+			<form id="subscribeForm" action="https://api.ghjobssubscribe.com/subscribe">
 				<input type="email" class="email" name="email" placeholder="Enter your email address">
 				<button type="submit" class="subscribeButton">Subscribe</button>
 			</form>
-			<form id="manageForm" hidden>
+			<form id="manageForm" action="https://api.ghjobssubscribe.com/manage" hidden>
 				<input type="email" class="email" name="email" placeholder="Enter your email address">
 				<button type="submit" class="manageButton">Manage</button>
 			</form>
-			<form id="unsubscribeForm" hidden>
+			<form id="unsubscribeForm" action="https://api.ghjobssubscribe.com/unsubscribe" hidden>
 				<input type="email" class="email" name="email" placeholder="Enter your email address">
 				<button type="submit" class="unsubscribeButton">Unsubscribe</button>
 			</form>

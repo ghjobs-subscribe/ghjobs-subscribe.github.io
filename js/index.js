@@ -2,7 +2,6 @@ $(document).ready(function () {
     var lasthash = window.location.hash;
 
     var options = {
-        url: 'https://api.ghjobssubscribe.com/subscribe',
         type: 'POST',
         dataType: 'json',
         beforeSubmit: showSpinner,
@@ -14,8 +13,19 @@ $(document).ready(function () {
         $(this).ajaxSubmit(options);
         return false;
     });
+    $('#manageForm').ajaxForm();
+    $('#manageForm').submit(function () {
+        $(this).ajaxSubmit(options);
+        return false;
+    });
+    $('#unsubscribeForm').ajaxForm();
+    $('#unsubscribeForm').submit(function () {
+        $(this).ajaxSubmit(options);
+        return false;
+    });
 
     $("a.nav-link").click(function () {
+        $(".message").hide();
         $(".active").removeClass("active");
         $(this).addClass("active");
         localStorage.setItem("clickedLinkID", $(this).attr("id"));
@@ -26,7 +36,6 @@ $(document).ready(function () {
         if (lasthash == "") {
             lasthash = "#subscribeForm";
         }
-        // console.log(lasthash, hash);
         $('form' + lasthash).hide();
         $('form' + hash).show();
         lasthash = hash;
