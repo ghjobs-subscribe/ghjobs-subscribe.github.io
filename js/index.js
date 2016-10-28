@@ -33,9 +33,6 @@ $(document).ready(function () {
     });
 
     $(window).on('hashchange', function () {
-        // if (lasthash == "") {
-        //     lasthash = "subscribeLink"
-        // }
         var hash = window.location.hash;
         console.log(lasthash, hash);
         $('form' + lasthash).hide();
