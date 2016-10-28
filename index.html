@@ -6,14 +6,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="GHJobs Subscribe - Get email updates for jobs of your choice from Github Jobs.">
-
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/ghjs-180x180.png">
 	<link rel="icon" type="image/png" href="assets/ghjs-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="assets/ghjs-16x16.png" sizes="16x16">
 	<link rel="shortcut icon" href="assets/ghjs.ico">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
 	<script src="https://oss.maxcdn.com/jquery.form/3.50/jquery.form.min.js"></script>
 </head>
@@ -25,20 +23,32 @@
 			<h1>GHJobs Subscribe</h1>
 			<h2>Get email updates for jobs of your choice from Github Jobs.</h2>
 		</div>
-		<div class="message" hidden></div>
+		<div class="navbar">
+			<a href="#subscribeForm" class="nav-link subscribeLink active" id="subscribeFormLink">Subscribe</a>
+			<a href="#manageForm" class="nav-link manageLink" id="manageFormLink">Manage</a>
+			<a href="#unsubscribeForm" class="nav-link unsubscribeLink" id="unsubscribeFormLink">Unsubscribe</a>
+		</div>
 		<div class="spinner" hidden>
 			<div class="bounce1"></div>
 			<div class="bounce2"></div>
 			<div class="bounce3"></div>
 		</div>
 		<div class="form">
-			<form id="subscribeUser">
+			<div class="message" hidden></div>
+			<form id="subscribeForm">
 				<input type="email" class="email" name="email" placeholder="Enter your email address">
-				<button type="submit" class="subscribe">Subscribe</button>
+				<button type="submit" class="subscribeButton">Subscribe</button>
+			</form>
+			<form id="manageForm" hidden>
+				<input type="email" class="email" name="email" placeholder="Enter your email address">
+				<button type="submit" class="manageButton">Manage</button>
+			</form>
+			<form id="unsubscribeForm" hidden>
+				<input type="email" class="email" name="email" placeholder="Enter your email address">
+				<button type="submit" class="unsubscribeButton">Unsubscribe</button>
 			</form>
 		</div>
 		<div class="strip">
-			<br>This project is under development. If you subscribe now, you will get an email when it goes live.
 			<br>Only relevant content will be delivered to your mailbox. No spam.
 			<br>Developed by <a href="http://hasit.github.io" target="_blank"><strong>Hasit Mistry</strong></a>.
 		</div>
