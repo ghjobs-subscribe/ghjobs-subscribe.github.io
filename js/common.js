@@ -24,6 +24,7 @@ function processManageJSON(data) {
     if (data.success === true) {
         $(".form").hide();
         $(".userInfo").text(data.userEmail + " (inactive)")
+        $('.userEmail').text(data.userEmail)
         $(".userFirstName").text(data.userFirstName)
         $(".userLasttName").text(data.userLasttName)
         $(".subTag").text(data.subTag)
