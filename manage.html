@@ -26,26 +26,37 @@
 		<div class="navbar">
 			<a href="./index.html">Subscribe</a>
 			<a href="#" class="active">Manage</a>
-			<a href="./unsubscribe.html">Unsubscribe</a>
 		</div>
 		<div class="spinner" hidden>
 			<div class="bounce1"></div>
 			<div class="bounce2"></div>
 			<div class="bounce3"></div>
 		</div>
+		<div class="message" hidden></div>
 		<div class="form">
-			<div class="message" hidden></div>
-			<form id="manageForm" action="https://api.ghjobssubscribe.com/manage">
+			<form id="manageForm">
 				<input type="email" class="email" name="email" placeholder="Enter your email address">
 				<button type="submit" class="manageButton">Manage</button>
 			</form>
 		</div>
-		<div class="strip">
+		<div class="form2" hidden>
+			<form id="updateUserForm">
+				<label class="userInfo"></label>
+				<input type="text" name="userFirstName" class="userFirstName" placeholder="First Name">
+				<input type="text" name="userLastName" class="userLastName" placeholder="Last Name">
+				<input type="text" name="subTag" class="subTag" placeholder="Title, benefits, companies, expertise">
+				<input type="text" name="subLocation" class="subLocation" placeholder="City, state, zipe code or country">
+				<a href="./manage.html" class="cancelLink">Cancel</a>
+				<button type="submit " class="updateButton"></button>
+			</form>
+		</div>
+		<div class="strip ">
 			<br>Only relevant content will be delivered to your mailbox. No spam.
-			<br>Developed by <a href="http://hasit.github.io" target="_blank"><strong>Hasit Mistry</strong></a>.
+			<br>Developed by <a href="http://hasit.github.io " target="_blank "><strong>Hasit Mistry</strong></a>.
 		</div>
 	</div>
-	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript " src="js/common.js "></script>
+	<script type="text/javascript " src="js/manage.js "></script>
 	<script>
   	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
