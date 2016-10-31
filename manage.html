@@ -27,23 +27,22 @@
 		</div>
 		<div class="navbar">
 			<a href="./index.html">Subscribe</a>
-			<a href="#" class="active">Manage</a>
+			<a href="./manage.html" class="active">Manage</a>
 		</div>
 		<div class="spinner" hidden>
 			<div class="bounce1"></div>
 			<div class="bounce2"></div>
 			<div class="bounce3"></div>
 		</div>
+		<div class="message" hidden></div>
 		<div class="form">
-			<div class="message" hidden></div>
-			<form id="manageForm" action="https://api.ghjobssubscribe.com/manage" method="POST">
+			<form id="manageForm">
 				<input type="email" class="email" name="email" placeholder="Enter your email address">
 				<button type="submit" class="manageButton">Manage</button>
 			</form>
 		</div>
 		<div class="form2" hidden>
-			<div class="message" hidden></div>
-			<form id="updateUserForm" action="https://api.ghjobssubscribe.com/manage/update" method="POST">
+			<form id="updateForm">
 				<label class="userInfo"></label>
 				<input type="text" name="userEmail" class="userEmail" hidden>
 				<input type="text" name="userFirstName" class="userFirstName" placeholder="First Name">
