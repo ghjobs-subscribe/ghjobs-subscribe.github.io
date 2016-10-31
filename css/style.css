@@ -102,8 +102,7 @@ body {
     -webkit-transform: scale(1);
     transform: scale(1); } }
 .message {
-  color: #2a7fc3;
-  margin-bottom: 2em; }
+  color: #2a7fc3; }
 
 .form input {
   border-style: solid;
@@ -145,6 +144,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; }
+  .form2 #updateUserForm .message {
+    display: inline-block;
+    justify-content: flex-end; }
 .form2 label {
   text-align: left; }
 .form2 input {
@@ -154,9 +156,7 @@ body {
   font-size: 16px;
   padding: 10px 14px;
   text-align: left;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s; }
+  margin: 4px 2px; }
 .form2 input:focus::-webkit-input-placeholder {
   color: transparent; }
 .form2 input:focus:-moz-placeholder {
