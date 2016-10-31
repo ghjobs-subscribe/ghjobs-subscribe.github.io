@@ -142,13 +142,9 @@ body {
 
 .form2 #updateUserForm {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
-  .form2 #updateUserForm .message {
-    display: inline-block;
-    justify-content: flex-end; }
+  flex-direction: column; }
 .form2 label {
-  text-align: left; }
+  text-align: center; }
 .form2 input {
   border-style: solid;
   border-color: #294455;
@@ -173,9 +169,9 @@ body {
   padding: 12px 16px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
+  display: inline-block;
   cursor: pointer; }
 
 .strip a {
