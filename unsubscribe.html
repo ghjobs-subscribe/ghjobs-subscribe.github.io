@@ -30,9 +30,9 @@
 			<div class="bounce2"></div>
 			<div class="bounce3"></div>
 		</div>
-		<div class="message" hidden></div>
 		<div class="form">
-			<form id="unsubscribeForm">
+			<div class="message" hidden></div>
+			<form id="unsubscribeForm" action="https://api.ghjobssubscribe.com/unsubscribe" method="POST">
 				<input type="email" class="email" name="email" placeholder="Enter your email address">
 				<button type="submit" class="unsubscribeButton">Unsubscribe</button>
 			</form>
