@@ -40,6 +40,8 @@ body {
   .heading h2 {
     font-size: 1.2em;
     margin: 0; }
+    .heading h2 a {
+      border-bottom: 1px dashed #294455; }
 
 .navbar {
   margin-bottom: 2em; }
