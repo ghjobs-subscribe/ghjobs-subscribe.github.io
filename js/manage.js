@@ -1,7 +1,5 @@
 $(document).ready(function () {
     var options = {
-        url: 'https://api.ghjobssubscribe.com/manage',
-        type: 'POST',
         dataType: 'json',
         beforeSubmit: showSpinner,
         success: processManageJSON,
@@ -9,6 +7,11 @@ $(document).ready(function () {
     };
     $('#manageForm').ajaxForm();
     $('#manageForm').submit(function () {
+        $(this).ajaxSubmit(options);
+        return false;
+    });
+    $('#updateForm').ajaxForm();
+    $('#updateForm').submit(function () {
         $(this).ajaxSubmit(options);
         return false;
     });
